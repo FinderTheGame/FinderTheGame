@@ -1,6 +1,4 @@
-﻿# The game starts here.
-
-label scene_chris_start:
+﻿label scene_chris_start:
 
     # Story flags
     $ shoot = False
