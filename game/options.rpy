@@ -151,6 +151,8 @@ define config.save_directory = "FinderTheGame-1520922192"
 
 define config.window_icon = "gui/window_icon.png"
 
+define config.layers = ['bg', 'master', 'transient', 'screens', 'overlay']
+
 
 ## Build configuration #########################################################
 ##
