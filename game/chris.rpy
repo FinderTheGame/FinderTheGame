@@ -1,22 +1,4 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-# Characters
-define anna = Character("Anna")
-define chris = Character("Chris")
-
-# Character Images
-image img_anna = "anna.png"
-image img_chris = "chris.png"
-
-# Backgrounds
-image test = "Test.jpg"
-
-# The game starts here.
-
-label start:
+﻿label scene_chris_start:
 
     # Story flags
     $ shoot = False
@@ -25,13 +7,13 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene test
+    scene house_front onlayer bg
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    # show img_anna
+    show img_anna at anna_pos
 
     # scene house
 
@@ -45,21 +27,29 @@ label start:
 
     "You knock on the door and to your surprise, within milliseconds, Chris opens the door as if he was waiting for your arrival right behind the door."
 
-    # show img_chris
+    show img_chris at chris_pos
 
     chris "Hi Anna! Please come in! Nice to meet you."
 
-    "Briefly setting your suspicion aside for a moment, you greet him ack with a pleasant smile."
+    "Briefly setting your suspicion aside for a moment, you greet him back with a pleasant smile."
 
     anna "Thanks! Nice to meet you too!"
 
     "You enter his apartment, only to be greeted by even stronger scents of iron." 
+
+    scene room1 onlayer bg
     
     "You have major glances at your surroundings only to find a very ordinary apartment. No source of iron in sight."
     
     "You conclude that the smell must be coming from the basement."
 
     "You catch a glimpse of a sketchbook lying on the ground."
+
+    # show img_sketchbook
+
+    "" # empty line, wait for user input to hide img_sketchbook
+
+    # hide img_sketchbook
 
     # show img_anna_pointing
 
@@ -128,14 +118,14 @@ menu shoot:
 
         "Your life is now really fucked big time."
 
-        jump epilogue
+        jump scene_chris_end
 
     "No! Killing is wrong!":
         "You quickly radio your headquarter for ambulance support. Your life will be slightly difficult from now on." 
         
         "But at least you did the right thing."
 
-        jump epilogue
+        jump scene_chris_end
 
 
 label sketchbook_serious:
@@ -153,7 +143,7 @@ label sketchbook_serious:
 
     "You make something up about you having to leave immediately. You both say farewell."
 
-    jump epilogue
+    jump scene_chris_end
 
 label sketchbook_nice:
     chris "Finally! Some appreciation for my art! Thank you very much!"
@@ -186,9 +176,9 @@ label sketchbook_nice:
     
     "He kindly invites you to join his art project, in which you politely decline after serious reconsideration."
 
-    jump epilogue
+    jump scene_chris_end
     
-label epilogue:
+label scene_chris_end:
     if shoot:
         "Despite his admission of his mistakes, you shot him in cold blood. Maybe you have the serial killer blood in you as well?"
 
