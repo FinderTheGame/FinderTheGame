@@ -6,13 +6,27 @@
 # Characters
 define anna = Character("Anna")
 define chris = Character("Chris")
+define braden = Character("Braden")
 
 # Character Images
-image img_anna = "anna.png"
+image img_anna = im.Flip("anna.png", True)
 image img_chris = "chris.png"
+image img_braden = "braden.png"
+
+# Character Images positions
+transform anna_pos:
+    xpos 450
+    ypos 200
+    zoom 0.8
+
+transform chris_pos:
+    xpos 800
+    ypos 160
+    zoom 0.8
 
 # Backgrounds
-image test = "Test.jpg"
+image room1 = "room_1.png"
+image room2 = "room_2.png"
 
 # The game starts here.
 
@@ -25,13 +39,13 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene test
+    scene house_front onlayer bg
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    # show img_anna
+    show img_anna at anna_pos
 
     # scene house
 
@@ -45,21 +59,29 @@ label start:
 
     "You knock on the door and to your surprise, within milliseconds, Chris opens the door as if he was waiting for your arrival right behind the door."
 
-    # show img_chris
+    show img_chris at chris_pos
 
     chris "Hi Anna! Please come in! Nice to meet you."
 
-    "Briefly setting your suspicion aside for a moment, you greet him ack with a pleasant smile."
+    "Briefly setting your suspicion aside for a moment, you greet him back with a pleasant smile."
 
     anna "Thanks! Nice to meet you too!"
 
     "You enter his apartment, only to be greeted by even stronger scents of iron." 
+
+    scene room1 onlayer bg
     
     "You have major glances at your surroundings only to find a very ordinary apartment. No source of iron in sight."
     
     "You conclude that the smell must be coming from the basement."
 
     "You catch a glimpse of a sketchbook lying on the ground."
+
+    # show img_sketchbook
+
+    "" # empty line, wait for user input to hide img_sketchbook
+
+    # hide img_sketchbook
 
     # show img_anna_pointing
 
