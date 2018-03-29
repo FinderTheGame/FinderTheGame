@@ -1,36 +1,6 @@
-﻿# The script of the game goes in this file.
+﻿# The game starts here.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-# Characters
-define anna = Character("Anna")
-define chris = Character("Chris")
-define braden = Character("Braden")
-
-# Character Images
-image img_anna = im.Flip("anna.png", True)
-image img_chris = "chris.png"
-image img_braden = "braden.png"
-
-# Character Images positions
-transform anna_pos:
-    xpos 450
-    ypos 200
-    zoom 0.8
-
-transform chris_pos:
-    xpos 800
-    ypos 160
-    zoom 0.8
-
-# Backgrounds
-image room1 = "room_1.png"
-image room2 = "room_2.png"
-
-# The game starts here.
-
-label start:
+label scene_chris_start:
 
     # Story flags
     $ shoot = False
@@ -150,14 +120,14 @@ menu shoot:
 
         "Your life is now really fucked big time."
 
-        jump epilogue
+        jump scene_chris_end
 
     "No! Killing is wrong!":
         "You quickly radio your headquarter for ambulance support. Your life will be slightly difficult from now on." 
         
         "But at least you did the right thing."
 
-        jump epilogue
+        jump scene_chris_end
 
 
 label sketchbook_serious:
@@ -175,7 +145,7 @@ label sketchbook_serious:
 
     "You make something up about you having to leave immediately. You both say farewell."
 
-    jump epilogue
+    jump scene_chris_end
 
 label sketchbook_nice:
     chris "Finally! Some appreciation for my art! Thank you very much!"
@@ -208,9 +178,9 @@ label sketchbook_nice:
     
     "He kindly invites you to join his art project, in which you politely decline after serious reconsideration."
 
-    jump epilogue
+    jump scene_chris_end
     
-label epilogue:
+label scene_chris_end:
     if shoot:
         "Despite his admission of his mistakes, you shot him in cold blood. Maybe you have the serial killer blood in you as well?"
 
