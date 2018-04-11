@@ -56,6 +56,25 @@ image img_chris_serious_8 = "chris/serious/serious_8.png"
 image img_chris_serious_9 = "chris/serious/serious_9.png"
 image img_chris_serious_end = "chris/serious/serious_end.png"
 
+# Nice images
+image img_chris_nice_1 = "chris/nice/nice_1.png"
+image img_chris_nice_2 = "chris/nice/nice_2.png"
+image img_chris_nice_3 = "chris/nice/nice_3.png"
+image img_chris_nice_4 = "chris/nice/nice_4.png"
+image img_chris_nice_5 = "chris/nice/nice_5.png"
+image img_chris_nice_6 = "chris/nice/nice_6.png"
+image img_chris_nice_7 = "chris/nice/nice_7.png"
+image img_chris_nice_8 = "chris/nice/nice_8.png"
+image img_chris_nice_9 = "chris/nice/nice_9.png"
+image img_chris_nice_10 = "chris/nice/nice_10.png"
+image img_chris_nice_11 = "chris/nice/nice_11.png"
+image img_chris_nice_12 = "chris/nice/nice_12.png"
+image img_chris_nice_13 = "chris/nice/nice_13.png"
+image img_chris_nice_14 = "chris/nice/nice_14.png"
+image img_chris_nice_15 = "chris/nice/nice_15.png"
+image img_chris_nice_16 = "chris/nice/nice_16.png"
+image img_chris_nice_end = "chris/nice/nice_end.png"
+
 label scene_chris_start:
 
     scene
@@ -133,6 +152,8 @@ menu sketchbook:
         jump sketchbook_serious
 
     "Nice cop":
+        scene img_chris_nice_1 onlayer bg
+
         "They’re really nice! I’d love to see some more later!"
 
         jump sketchbook_nice
@@ -269,37 +290,67 @@ label sketchbook_serious:
     jump scene_chris_serious_end
 
 label sketchbook_nice:
+    scene img_chris_nice_2 onlayer bg
+
     chris "Finally! Some appreciation for my art! Thank you very much!"
+
+    scene img_chris_nice_3 onlayer bg
 
     anna "I’d really love to see the basement by the way. Can we please?"
 
+    scene img_chris_nice_4 onlayer bg
+
     chris "(reluctantly) Ok fine. I’ll show you."
 
+    scene img_chris_nice_5 onlayer bg
+
     "You two head down to the basement."
+
+    scene img_chris_nice_6 onlayer bg
     
     "As soon as Chris opens the door, the smell of iron amplifies to the point you can taste it." 
+
+    scene img_chris_nice_7 onlayer bg
     
     "You think to yourself: there must be a lot of blood down there, or it has got to be one big fucking iron statue."
+
+    scene img_chris_nice_8 onlayer bg
     
     "Subconsciously, you slightly back away."
 
+    scene img_chris_nice_9 onlayer bg
+
     chris "Follow me. You wanted this didn’t you?"
 
+    scene img_chris_nice_10 onlayer bg
+
     "He grabs your hand firm. It could be a sign of affection towards me, or he’s trying to harm me." 
+
+    scene img_chris_nice_11 onlayer bg
     
     "Offering resistance at this time does not sound like a good idea since you do not want to escalate things." 
+
+    scene img_chris_nice_12 onlayer bg
     
     "You lay your other hand on your concealed revolver just in case."
 
+    scene img_chris_nice_13 onlayer bg
+
     "As you head further down the stairs, a giant iron statue appears."
+
+    scene img_chris_nice_14 onlayer bg
     
     "Lively, he begins explaining all the intricate details about the artwork he is working on."
+
+    scene img_chris_nice_15 onlayer bg
     
     "Undoubtedly the smell of iron came from the body odor released as he was touching the statue during the creation of the art."
+
+    scene img_chris_nice_16 onlayer bg
     
     "He kindly invites you to join his art project, in which you politely decline after serious reconsideration."
 
-    jump scene_chris_end
+    jump scene_chris_nice_end
     
 label scene_chris_mock_end:
     if shoot:
@@ -320,6 +371,11 @@ label scene_chris_mock_end:
 
 label scene_chris_serious_end:
     scene img_chris_serious_end onlayer bg
+
+    jump scene_chris_end
+
+label scene_chris_nice_end:
+    scene img_chris_nice_end onlayer bg
 
     jump scene_chris_end
 
