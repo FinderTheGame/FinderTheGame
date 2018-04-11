@@ -36,6 +36,10 @@ image img_intro_4 = "intro_4.png"
 image img_intro_5 = "intro_5.png"
 image img_intro_6 = "intro_6.png"
 image img_intro_7 = "intro_7.png"
+image img_intro_8 = "intro_8.png"
+image img_intro_9 = "intro_9.png"
+image img_intro_10 = "intro_10.png"
+image img_scene_select = "scene_select.png"
 
 label start:
     scene img_intro_1 onlayer bg
@@ -72,13 +76,20 @@ label start:
 
     "All around the same age. All high-power career driven women, hell they even kind of look like you.  It doesn’t sit well, you feel especially sickened."
 
+    scene img_intro_8 onlayer bg
+
     "Another thought occurs to you, all victims were active on the popular dating app Finder."
+
+    scene img_intro_9 onlayer bg
     
     "Could the killer have been using it to narrow in on his victims? It’s unconventional but nothing else has worked."
+
+    scene img_intro_10 onlayer bg
     
     "You grab your phone and make a profile. Maybe you’re just his type."
   
-# The game starts here.
+    scene img_scene_select
+
 menu scene_select:  
     "Select a scene:"
 
