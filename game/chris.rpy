@@ -10,11 +10,6 @@ image img_chris_8 = "chris/chris_8.png"
 image img_chris_9 = "chris/chris_9.png"
 image img_chris_10 = "chris/chris_10.png"
 image img_chris_11 = "chris/chris_11.png"
-image img_chris_12 = "chris/chris_12.png"
-image img_chris_13 = "chris/chris_13.png"
-image img_chris_14 = "chris/chris_14.png"
-image img_chris_15 = "chris/chris_15.png"
-
 
 label scene_chris_start:
 
@@ -26,60 +21,52 @@ label scene_chris_start:
     scene img_chris_1 onlayer bg
 
     "You arrive at his house door – a thick wooden door with a hint of rot."
-
-    scene img_chris_2 onlayer bg
     
     "You vaguely smell the metallic iron smell from outside."
 
-    scene img_chris_3 onlayer bg
+    scene img_chris_2 onlayer bg
     
     "Such smell is common when iron in blood react with oils in your skins, resulting in release of molecules that we are sensitive to and identify as ‘metallic’ smell."
 
-    scene img_chris_4 onlayer bg
+    scene img_chris_3 onlayer bg
     
     "Therefore, he either has a giant iron statue in his house that he regularly touches or he might be a serial killer."
 
-    scene img_chris_5 onlayer bg
+    scene img_chris_4 onlayer bg
 
     "You knock on the door and to your surprise, within milliseconds, Chris opens the door as if he was waiting for your arrival right behind the door."
 
-    scene img_chris_6 onlayer bg
-
     chris "Hi Anna! Please come in! Nice to meet you."
 
-    scene img_chris_7 onlayer bg
+    scene img_chris_5 onlayer bg
 
     "Briefly setting your suspicion aside for a moment, you greet him back with a pleasant smile."
 
-    scene img_chris_8 onlayer bg
-
     anna "Thanks! Nice to meet you too!"
 
-    scene img_chris_9 onlayer bg
+    scene img_chris_6 onlayer bg
 
     "You enter his apartment, only to be greeted by even stronger scents of iron." 
-
-    scene img_chris_10 onlayer bg
     
     "You have major glances at your surroundings only to find a very ordinary apartment. No source of iron in sight."
 
-    scene img_chris_11 onlayer bg
+    scene img_chris_7 onlayer bg
     
     "You conclude that the smell must be coming from the basement."
 
-    scene img_chris_12 onlayer bg
+    scene img_chris_8 onlayer bg
 
     "You catch a glimpse of a sketchbook lying on the ground."
 
-    scene img_chris_13 onlayer bg
+    scene img_chris_9 onlayer bg
 
     anna "I didn’t know you draw. May I examine them?"
 
-    scene img_chris_14 onlayer bg
+    scene img_chris_10 onlayer bg
 
     chris "Of course!"
 
-    scene img_chris_15 onlayer bg
+    scene img_chris_11 onlayer bg
 
     "You find many drawings of women’s clothes and naked women, some appear to be depicted to be dead." 
 
