@@ -11,6 +11,23 @@ image img_chris_9 = "chris/chris_9.png"
 image img_chris_10 = "chris/chris_10.png"
 image img_chris_11 = "chris/chris_11.png"
 
+# Half-jokingly images
+image img_chris_mock_1 = "chris/mock/mock_1.png"
+image img_chris_mock_2 = "chris/mock/mock_2.png"
+image img_chris_mock_3 = "chris/mock/mock_3.png"
+image img_chris_mock_4 = "chris/mock/mock_4.png"
+image img_chris_mock_5 = "chris/mock/mock_5.png"
+image img_chris_mock_6 = "chris/mock/mock_6.png"
+image img_chris_mock_7 = "chris/mock/mock_7.png"
+image img_chris_mock_8 = "chris/mock/mock_8.png"
+image img_chris_mock_9 = "chris/mock/mock_9.png"
+image img_chris_mock_10 = "chris/mock/mock_10.png"
+image img_chris_mock_11 = "chris/mock/mock_11.png"
+image img_chris_mock_12 = "chris/mock/mock_12.png"
+image img_chris_mock_13 = "chris/mock/mock_13.png"
+image img_chris_mock_14 = "chris/mock/mock_14.png"
+image img_chris_mock_15 = "chris/mock/mock_15.png"
+
 label scene_chris_start:
 
     scene
@@ -74,43 +91,76 @@ menu sketchbook:
     "Impulsively, you respond loudly in the following manner:"
     
     "Half-jokingly and with a hint of mockery":
+        scene img_chris_mock_1 onlayer bg
+
         "This is a little creepy to be honest. I can’t even imagine what is hiding in your basement."
+
         jump sketchbook_mock
 
     "Serious":
         "Nice drawing. But I have to ask, what’s this smell of iron by the way?"
+
         jump sketchbook_serious
 
     "Nice cop":
         "They’re really nice! I’d love to see some more later!"
+
         jump sketchbook_nice
 
 label sketchbook_mock:
+    scene img_chris_mock_2 onlayer bg
+
     "Chris seems slightly rattled."
+
+    scene img_chris_mock_3 onlayer bg
     
     chris "I disagree. You can’t judge me based on my personal taste in art."
 
+    scene img_chris_mock_4 onlayer bg
+
     anna "Apologies. I meant it as a joke. But you gotta admit it is a bit unusual."
 
+    scene img_chris_mock_5 onlayer bg
+
     "He suddenly pulls your hand, and thus your body forward violently."
+
+    scene img_chris_mock_6 onlayer bg
     
     "You don’t know whether it is the result of him slipping or trying to intentionally harm you."
+
+    scene img_chris_mock_7 onlayer bg
     
     "Your muscle memory from years of training makes you pull out your revolver and blindly shoot this man twice."
+
+    scene img_chris_mock_8 onlayer bg
     
     "One grazes his arm, but the other one is more fatal. It has hit his stomach, penetrating his internal organs."
 
+    scene img_chris_mock_9 onlayer bg
+
     chris "I just… wanted to show … my art.. Fuck you… What are you? A serial killer?.."
 
+    scene img_chris_mock_10 onlayer bg
+
     "You stand there awkwardly. You look around only to find a giant metal statue standing before you, without a doubt, that is the source of the metallic smell."
+
+    scene img_chris_mock_11 onlayer bg
     
     "You fucked up big time."
 
+    scene img_chris_mock_12 onlayer bg
+
     anna "It’s your own damn fault! Why did you pull me so violently?"
+
+    scene img_chris_mock_13 onlayer bg
 
     chris "I had no idea it was violent.. I just wanted to surprise you (he coughs repeatedly) I’m going to sue you until you are bankrupt! My daddy is a millionaire! You’ll regret this!"
 
+    scene img_chris_mock_14 onlayer bg
+
     "You definitely don’t have the financial stability to risk it. Finishing him off might be a good idea." 
+
+    scene img_chris_mock_15 onlayer bg
     
     "Should you shoot this man one more time? You are confident in your ability to lie about the incident to get away with minor punishment."
 
