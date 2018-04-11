@@ -38,6 +38,13 @@ image img_chris_mock_shoot_6 = "chris/mock/shoot/shoot_6.png"
 image img_chris_mock_shoot_7 = "chris/mock/shoot/shoot_7.png"
 image img_chris_mock_shoot_end = "chris/mock/shoot/shoot_end.png"
 
+# Mock-not_shoot images
+image img_chris_mock_not_shoot_1 = "chris/mock/not_shoot/not_shoot_1.png"
+image img_chris_mock_not_shoot_2 = "chris/mock/not_shoot/not_shoot_2.png"
+image img_chris_mock_not_shoot_3 = "chris/mock/not_shoot/not_shoot_3.png"
+image img_chris_mock_not_shoot_end = "chris/mock/not_shoot/not_shoot_end.png"
+
+
 label scene_chris_start:
 
     scene
@@ -205,7 +212,12 @@ menu shoot:
         jump scene_chris_end
 
     "No! Killing is wrong!":
-        "You quickly radio your headquarter for ambulance support. Your life will be slightly difficult from now on." 
+
+        scene img_chris_mock_not_shoot_1 onlayer bg
+
+        "You quickly radio your headquarter for ambulance support. Your life will be slightly difficult from now on."
+
+        scene img_chris_mock_not_shoot_2 onlayer bg
         
         "But at least you did the right thing."
 
@@ -271,7 +283,11 @@ label scene_chris_end:
         scene img_chris_mock_shoot_end onlayer bg
 
     else:
+        scene img_chris_mock_not_shoot_3 onlayer bg
+
         " Perhaps he won’t make a very good average joe since he has a giant fucking statue in his basement. However it’s clear that he really is a nice guy who loves his art. Just imagine if you accidently shot him after mistaking for a serial killer!"
+
+        scene img_chris_mock_not_shoot_end onlayer bg
 
     # This ends the game.
     "THE END"
