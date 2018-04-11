@@ -44,6 +44,17 @@ image img_chris_mock_not_shoot_2 = "chris/mock/not_shoot/not_shoot_2.png"
 image img_chris_mock_not_shoot_3 = "chris/mock/not_shoot/not_shoot_3.png"
 image img_chris_mock_not_shoot_end = "chris/mock/not_shoot/not_shoot_end.png"
 
+# Serious images
+image img_chris_serious_1 = "chris/serious/serious_1.png"
+image img_chris_serious_2 = "chris/serious/serious_2.png"
+image img_chris_serious_3 = "chris/serious/serious_3.png"
+image img_chris_serious_4 = "chris/serious/serious_4.png"
+image img_chris_serious_5 = "chris/serious/serious_5.png"
+image img_chris_serious_6 = "chris/serious/serious_6.png"
+image img_chris_serious_7 = "chris/serious/serious_7.png"
+image img_chris_serious_8 = "chris/serious/serious_8.png"
+image img_chris_serious_9 = "chris/serious/serious_9.png"
+image img_chris_serious_end = "chris/serious/serious_end.png"
 
 label scene_chris_start:
 
@@ -115,6 +126,8 @@ menu sketchbook:
         jump sketchbook_mock
 
     "Serious":
+        scene img_chris_serious_1 onlayer bg
+
         "Nice drawing. But I have to ask, what’s this smell of iron by the way?"
 
         jump sketchbook_serious
@@ -209,7 +222,7 @@ menu shoot:
 
         scene img_chris_mock_shoot_6 onlayer bg
 
-        jump scene_chris_end
+        jump scene_chris_mock_end
 
     "No! Killing is wrong!":
 
@@ -221,25 +234,39 @@ menu shoot:
         
         "But at least you did the right thing."
 
-        jump scene_chris_end
+        jump scene_chris_mock_end
 
 
 label sketchbook_serious:
+    scene img_chris_serious_2 onlayer bg
+
     "Chris looks composed, as if he’d expected it."
+
+    scene img_chris_serious_3 onlayer bg
 
     chris "I’m not sure if I’m comfortable with you enough to show you right now."
 
+    scene img_chris_serious_4 onlayer bg
+
     "As you head further down the stairs, a giant iron statue appears." 
+
+    scene img_chris_serious_5 onlayer bg
     
     "He kindly but seriously explain how he is creating it for an art show. All mystery has been solved and it’s clear that the smell came from this big ass iron statue."
 
+    scene img_chris_serious_6 onlayer bg
+
     chris "This is the source of the smell. I hope you didn’t think I was a serial killer of something! Hahaha"
+
+    scene img_chris_serious_7 onlayer bg
 
     anna "Of course not! haha. It really is a beautiful piece of art work."
 
+    scene img_chris_serious_8 onlayer bg
+
     "You make something up about you having to leave immediately. You both say farewell."
 
-    jump scene_chris_end
+    jump scene_chris_serious_end
 
 label sketchbook_nice:
     chris "Finally! Some appreciation for my art! Thank you very much!"
@@ -274,7 +301,7 @@ label sketchbook_nice:
 
     jump scene_chris_end
     
-label scene_chris_end:
+label scene_chris_mock_end:
     if shoot:
         scene img_chris_mock_shoot_7 onlayer bg
 
@@ -288,8 +315,17 @@ label scene_chris_end:
         " Perhaps he won’t make a very good average joe since he has a giant fucking statue in his basement. However it’s clear that he really is a nice guy who loves his art. Just imagine if you accidently shot him after mistaking for a serial killer!"
 
         scene img_chris_mock_not_shoot_end onlayer bg
+        
+    jump scene_chris_end
 
-    # This ends the game.
+label scene_chris_serious_end:
+    scene img_chris_serious_end onlayer bg
+
+    jump scene_chris_end
+
+label scene_chris_end:
+
     "THE END"
 
+    # This ends the game.
     return
