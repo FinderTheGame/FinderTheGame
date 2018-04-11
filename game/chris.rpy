@@ -11,7 +11,7 @@ image img_chris_9 = "chris/chris_9.png"
 image img_chris_10 = "chris/chris_10.png"
 image img_chris_11 = "chris/chris_11.png"
 
-# Half-jokingly images
+# Mock images
 image img_chris_mock_1 = "chris/mock/mock_1.png"
 image img_chris_mock_2 = "chris/mock/mock_2.png"
 image img_chris_mock_3 = "chris/mock/mock_3.png"
@@ -27,6 +27,16 @@ image img_chris_mock_12 = "chris/mock/mock_12.png"
 image img_chris_mock_13 = "chris/mock/mock_13.png"
 image img_chris_mock_14 = "chris/mock/mock_14.png"
 image img_chris_mock_15 = "chris/mock/mock_15.png"
+
+# Mock-shoot images
+image img_chris_mock_shoot_1 = "chris/mock/shoot/shoot_1.png"
+image img_chris_mock_shoot_2 = "chris/mock/shoot/shoot_2.png"
+image img_chris_mock_shoot_3 = "chris/mock/shoot/shoot_3.png"
+image img_chris_mock_shoot_4 = "chris/mock/shoot/shoot_4.png"
+image img_chris_mock_shoot_5 = "chris/mock/shoot/shoot_5.png"
+image img_chris_mock_shoot_6 = "chris/mock/shoot/shoot_6.png"
+image img_chris_mock_shoot_7 = "chris/mock/shoot/shoot_7.png"
+image img_chris_mock_shoot_end = "chris/mock/shoot/shoot_end.png"
 
 label scene_chris_start:
 
@@ -169,15 +179,28 @@ menu shoot:
 
     "Yes. This guy is an ass.":
         $ shoot = True
+
+        scene img_chris_mock_shoot_1 onlayer bg
+
         "His insults do not sit right with your ego. You are a big deal."
 
+        scene img_chris_mock_shoot_2 onlayer bg
+
         anna "Who are you talking to right now? I am the detective responsible for arrests of over 100 big time criminals." 
+        
+        scene img_chris_mock_shoot_3 onlayer bg
 
         anna "I was handpicked by the commissioner to find the biggest serial killer in the history. You can’t threaten me, I am the threat!"
 
+        scene img_chris_mock_shoot_4 onlayer bg
+
         "You plant a bullet deep into his heart. He squeals for 5 seconds, and then he was gone. You notice that your audio recording has been streaming into the cloud by accident."
 
+        scene img_chris_mock_shoot_5 onlayer bg
+
         "Your life is now really fucked big time."
+
+        scene img_chris_mock_shoot_6 onlayer bg
 
         jump scene_chris_end
 
@@ -241,7 +264,11 @@ label sketchbook_nice:
     
 label scene_chris_end:
     if shoot:
+        scene img_chris_mock_shoot_7 onlayer bg
+
         "Despite his admission of his mistakes, you shot him in cold blood. Maybe you have the serial killer blood in you as well?"
+
+        scene img_chris_mock_shoot_end onlayer bg
 
     else:
         " Perhaps he won’t make a very good average joe since he has a giant fucking statue in his basement. However it’s clear that he really is a nice guy who loves his art. Just imagine if you accidently shot him after mistaking for a serial killer!"
