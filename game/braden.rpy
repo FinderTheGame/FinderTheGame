@@ -1,17 +1,36 @@
-label scene_braden_start:
-    scene house_front onlayer bg
+# Braden Scene images
+image img_braden_1 = "braden/braden_1.png"
+image img_braden_2 = "braden/braden_2.png"
+image img_braden_3 = "braden/braden_3.png"
+image img_braden_4 = "braden/braden_4.png"
+image img_braden_choice = "braden/braden_choice_screen.png"
 
-    show img_anna at anna_pos
+# Braden Gun images
+image img_braden_gun_1 = "braden/gun/gun_1.png"
+
+# Braden Recorder images
+image img_braden_recorder_1 = "braden/recorder/recorder_1.png"
+
+label scene_braden_start:
+    scene
+
+    scene img_braden_1 onlayer bg
 
     "You have no problems finding Braden’s house, you arrive on time and pull up into the driveway."
+
+    scene img_braden_2 onlayer bg
     
     "Immediately you notice the door opens, he’s there waiting with a warm smile and a friendly wave." 
 
-    show img_braden at braden_pos
+    scene img_braden_3 onlayer bg
     
     "You weren’t expecting that." 
+
+    scene img_braden_4 onlayer bg
     
     "He leaves the house and starts to walk towards your car."
+
+    scene img_braden_choice onlayer bg
 
 menu greeting:
     "What will you do before he reaches your car?"
@@ -21,11 +40,17 @@ menu greeting:
         jump after_greeting
 
     "Discretely arm yourself":
+        scene img_braden_gun_1 onlayer bg
+
         "You grabbed your pistol from your car and discretely put it into your purse."
+
         jump after_greeting
 
     "Turn on tape recorder":
+        scene img_braden_recorder_1 onlayer bg
+
         "You switched on your tape recorder."
+        
         jump after_greeting
 
 label after_greeting:
